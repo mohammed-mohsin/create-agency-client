@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.color_one{
+  color: #111430;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.color_two{
+  color: #2D2D2D
+}
+.color_four{
+  color: #000000;
+  opacity: .7;
+}
+.color_three{
+  color: #7AB259
+}
+.color_five{
+  color: #707070;
+}
+
+
+
+.smallest_font_size{
+  font-size:1.3rem;
+}
+.medium_font_size{
+  font-size:2.5rem;
+}
+
+.c_a_button{
+  height: 45px;
+  background-color:#111430;
+  color: #ffffff;
+  font-size:1.3rem;
+}
+
+section{
+  margin-bottom:100px;
+}
+.c_a_nav nav ul li {
+	position: relative;
+}
+
+/* underline */
+.c_a_nav nav ul li::before {
+    background-color:  #7AB259;  
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.c_a_nav nav ul li:hover::before, .c_a_nav nav ul li:focus::before,
+.c_a_nav nav ul li::before, .c_a_nav nav ul li::before,
+.c_a_nav nav ul li .active {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+
+.c_a_nav nav ul li::before, 
+.c_a_nav nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 00px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    -webkit-transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+.c_a_header{
+  background-color:#FBD062;
+  height: 70vh;
+  width:100%;
+  position: relative;
+  z-index: 5;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
+}
+/* .header-container{
+  height: 850px;
+  position: relative;
+} */
+.c_a_header::after{
+  height: 850px;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  right: 0;
+  background-color: #FDD062;
+  transform: skewY(-3deg);
+  z-index: -1;
+  margin-top: -60px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .c_a_header {
+    height: 100vh;
+    text-align: center;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* .c_a_hero{
+  margin:-40px !important;
+} */
+.c_a_hero__right img{
+  padding:20px 0;
+  margin:auto 0 ;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.c_a_brands{
+  height: 30vh;
+  margin-top: 20%;
+  z-index: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.c_a_brands img{
+  margin: 5.5rem;
+  padding:  0 10px;
+}
+
+.c_a_services{
+  margin-top:700px;
+}
+
+.c_a_services__service{
+  padding-top: 15px;
+  width:370px;
+  height: 319px;
+transition: .5s;
+margin-top: 50px;
+}
+
+.c_a_services__service:hover{
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+}
+
+.c_a_works{
+  width:100%;
+  height: 720px;
+  background-color:  #111430;
+}
+.c_a_feedback{
+  width:100%;
+  height: 520px;
+
+}
+
+.c_a_contact{
+  background-color:#FBD062;
+  height: 100%;
+}
+.c_a_contact__mapouter{
+  position: relative;
+  text-align: right;
+  width: 600px;
+
+}
+.c_a_contact__gmap_canvas{
+  overflow: hidden;
+            background: none !important;
+            height: 400px;
+            width: 600px;
+}
+.c_a_footer{
+  background-color:#FBD062;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  
+
+}
+
+.c_a_admin__body{
+  background-color:#F4F7FC;
+  width: 100%;
+  height: 100%;
+}
+
+.c_a_sidebar{
+  height: 100vh;
+  width: 100%;
+  background-color:white;
+
+  margin-left:0;
+
+}
+.alice-carousel__stage-item * {
+  margin-left:  20px !important;
+  padding-left:  5px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .c_a_contact {
+    height: 100vh;
   }
 }
